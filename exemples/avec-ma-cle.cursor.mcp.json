@@ -1,0 +1,1 @@
+{ "mcpServers": { "investlytic": { "url": "https://investlytic.co/mcp", "headers": { "Authorization": "Bearer ilv_votre_cle" } } } }

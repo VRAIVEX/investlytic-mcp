@@ -1,0 +1,1 @@
+{ "servers": { "investlytic": { "type": "http", "url": "https://investlytic.co/mcp" } } }
