@@ -30,7 +30,7 @@ All start with `https://investlytic.co/api/v1` and answer to `GET`. Add `lang=en
 | `/dividendes` | Best dividend stocks (`resultats`) | `marche`, `rendement_min`, `rendement_max`, `limite` |
 | `/usage` | Your usage this month (not counted) | none |
 
-Symbol search is free and returns at most 50 results. `/tendance` and `/dividendes` return up to 50 rows on the Developer plan and up to 200 on the Business plan.
+Symbol search is free (not counted) but a key is required; it returns at most 50 results. `/tendance` and `/dividendes` return up to 50 rows on the Developer plan and up to 200 on the Business plan.
 
 Example answer from `/api/v1/action/MC.PA` (the field names stay in French; texts follow `lang`):
 
@@ -40,9 +40,12 @@ Example answer from `/api/v1/action/MC.PA` (the field names stay in French; text
   "criteres": [ { "cle": "tendance", "libelle": "Tendance du prix", "verdict": true,
                   "explication": "Le cours monte sur la durée : le marché accompagne l'entreprise." }, … ],
   "variation_annuelle": { "2024": 12.3, "2025": -4.1 },
+  "premier_passage_4_sur_5": "2025-03-14", "premier_passage_5_sur_5": null,
   "source": "Investlytic", "fiche": "https://investlytic.co/action-public?symbol=MC.PA",
   "avertissement": "Information factuelle, pas un conseil en investissement." }
 ```
+
+`premier_passage_4_sur_5` / `premier_passage_5_sur_5`: date the stock first reached 4/5 (or 5/5), `null` if never reached.
 
 `/usage` returns `plan`, `mois`, `inclus`, `utilises`, `reste`, `depassement`, `direct_aujourdhui` and `direct_plafond_jour`.
 
@@ -83,10 +86,10 @@ On error, the answer holds a readable message and the HTTP code: `{ "erreur": "C
 |---|---|---|
 | Subscription | EUR 29 excl. VAT / month | EUR 290 excl. VAT / month |
 | Calls included each month | 3,000 | 50,000 |
-| Beyond | EUR 0.01 per call | EUR 0.01 per call |
+| Beyond | €0.01 per call, billed per started block of 100 calls (€1) | €0.01 per call, billed per started block of 100 calls (€1) |
 | Live analysis | EUR 0.10 (max 200 per day) | EUR 0.10 (max 2,000 per day) |
 | Lists (trending, dividends) | up to 50 rows | up to 200 rows |
-| Symbol search | free, 50 results | free, 50 results |
+| Symbol search | free (not counted, key required), 50 results | free (not counted, key required), 50 results |
 | Widget | with the Investlytic logo | white label |
 | Support | — | by e-mail |
 

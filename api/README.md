@@ -30,7 +30,7 @@ Toutes commencent par `https://investlytic.co/api/v1` et répondent en `GET`. Aj
 | `/dividendes` | Les meilleures actions à dividende (`resultats`) | `marche`, `rendement_min`, `rendement_max`, `limite` |
 | `/usage` | Votre consommation du mois (non comptée) | aucun |
 
-La recherche de symbole est gratuite et renvoie au plus 50 résultats. `/tendance` et `/dividendes` vont jusqu'à 50 lignes avec le plan Développeur et jusqu'à 200 avec le plan Business.
+La recherche de symbole est gratuite (non décomptée) mais une clé est requise ; elle renvoie au plus 50 résultats. `/tendance` et `/dividendes` vont jusqu'à 50 lignes avec le plan Développeur et jusqu'à 200 avec le plan Business.
 
 Exemple de réponse de `/api/v1/action/MC.PA` :
 
@@ -40,9 +40,12 @@ Exemple de réponse de `/api/v1/action/MC.PA` :
   "criteres": [ { "cle": "tendance", "libelle": "Tendance du prix", "verdict": true,
                   "explication": "Le cours monte sur la durée : le marché accompagne l'entreprise." }, … ],
   "variation_annuelle": { "2024": 12.3, "2025": -4.1 },
+  "premier_passage_4_sur_5": "2025-03-14", "premier_passage_5_sur_5": null,
   "source": "Investlytic", "fiche": "https://investlytic.co/action-public?symbol=MC.PA",
   "avertissement": "Information factuelle, pas un conseil en investissement." }
 ```
+
+`premier_passage_4_sur_5` / `premier_passage_5_sur_5` : date à laquelle l'action a atteint pour la première fois 4/5 (ou 5/5), `null` si jamais atteint.
 
 `/usage` renvoie `plan`, `mois`, `inclus`, `utilises`, `reste`, `depassement`, `direct_aujourdhui` et `direct_plafond_jour`.
 
@@ -83,10 +86,10 @@ En cas d'erreur, la réponse contient un message lisible et le code HTTP : `{ "e
 |---|---|---|
 | Abonnement | 29 € HT / mois | 290 € HT / mois |
 | Appels inclus chaque mois | 3 000 | 50 000 |
-| Au-delà | 0,01 € l'appel | 0,01 € l'appel |
+| Au-delà | 0,01 € l'appel, facturé par tranche de 100 appels entamée (1 €) | 0,01 € l'appel, facturé par tranche de 100 appels entamée (1 €) |
 | Analyse en direct | 0,10 € (200 par jour maxi) | 0,10 € (2 000 par jour maxi) |
 | Listes (tendance, dividendes) | jusqu'à 50 lignes | jusqu'à 200 lignes |
-| Recherche de symbole | gratuite, 50 résultats | gratuite, 50 résultats |
+| Recherche de symbole | gratuite (non décomptée, clé requise), 50 résultats | gratuite (non décomptée, clé requise), 50 résultats |
 | Encart | avec le logo Investlytic | marque blanche |
 | Support | — | par e-mail |
 

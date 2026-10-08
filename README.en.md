@@ -79,8 +79,8 @@ hashed and only travel in your own configuration.
 
 A JSON API to get the Investlytic score of a stock (5 criteria, explanations, data date), trending stocks and the best dividend stocks, plus a one-line widget to show the score on your website (free, with the logo).
 
-- **Developer** plan: EUR 29 excl. VAT per month, 3,000 calls included, 14-day trial.
-- **Business** plan: EUR 290 excl. VAT per month, 50,000 calls included, white-label widget.
+- **Developer** plan: EUR 29 excl. VAT per month, 3,000 calls included then €0.01 per call, billed per started block of 100 calls (€1), 14-day trial.
+- **Business** plan: EUR 290 excl. VAT per month, 50,000 calls included then €0.01 per call, billed per started block of 100 calls (€1), white-label widget.
 - Enterprise: on quote. Symbol search is free.
 
 [API documentation and examples](api/README.en.md) · [Pricing](https://investlytic.co/tarifs)

@@ -103,8 +103,8 @@ Investlytic ; les clés personnelles sont stockées hachées et ne transitent qu
 
 Une API JSON pour récupérer la note Investlytic d'une action (5 critères, explications, date des données), les actions en tendance et les meilleures actions à dividende, plus un encart d'une ligne pour afficher la note sur votre site (gratuit, avec le logo).
 
-- Plan **Développeur** : 29 € HT par mois, 3 000 appels inclus, 14 jours d'essai.
-- Plan **Business** : 290 € HT par mois, 50 000 appels inclus, encart en marque blanche.
+- Plan **Développeur** : 29 € HT par mois, 3 000 appels inclus puis 0,01 € l'appel, facturé par tranche de 100 appels entamée (1 €), 14 jours d'essai.
+- Plan **Business** : 290 € HT par mois, 50 000 appels inclus puis 0,01 € l'appel, facturé par tranche de 100 appels entamée (1 €), encart en marque blanche.
 - Entreprise : sur devis. Recherche de symbole gratuite.
 
 [Documentation de l'API et exemples](api/README.md) · [Tarifs](https://investlytic.co/tarifs)
