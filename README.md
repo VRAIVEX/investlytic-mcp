@@ -99,6 +99,16 @@ sert la dernière mise à jour stockée, sauf en plan Pro. La date est indiquée
 **Le code du serveur est-il ici ?** Non. Ce dépôt est le mode d'emploi du connecteur. Le serveur est hébergé par
 Investlytic ; les clés personnelles sont stockées hachées et ne transitent que dans votre propre configuration.
 
+## API web
+
+Une API JSON pour récupérer la note Investlytic d'une action (5 critères, explications, date des données), les actions en tendance et les meilleures actions à dividende, plus un encart d'une ligne pour afficher la note sur votre site (gratuit, avec le logo).
+
+- Plan **Développeur** : 29 € HT par mois, 3 000 appels inclus, 14 jours d'essai.
+- Plan **Business** : 290 € HT par mois, 50 000 appels inclus, encart en marque blanche.
+- Entreprise : sur devis. Recherche de symbole gratuite.
+
+[Documentation de l'API et exemples](api/README.md) · [Tarifs](https://investlytic.co/tarifs)
+
 ## Support
 
 contact@investlytic.co · [investlytic.co/connecter-ia](https://investlytic.co/connecter-ia)
